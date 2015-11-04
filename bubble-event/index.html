@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>bubble 事件</title>
+</head>
+<body id="b">
+    <div id="area" style="width: 600px; height: 380px; background: black;">
+
+        <div id="iarea" style="width: 220px; height: 120px; background: silver;"></div>
+    </div>
+    <script>
+        function handlerClick(event) {
+            alert('父DIV');
+            event.stopPropagation();
+        }
+        function handlerClickI(event) {
+            //event.stopPropagation();
+            alert('巢狀DIV');
+        }
+        function handlerClickBody(event) {
+            alert('Body');
+        }
+        function handlerClickDocument(event) {
+            alert('DOCUMENT');
+        }
+        document.getElementById('area').addEventListener(
+            'click', handlerClick, false);
+        // document.getElementById('iarea').addEventListener(
+        //     'click', handlerClickI, false);
+        document.getElementById('b').addEventListener(
+            'click', handlerClickBody, false);
+        // document.addEventListener(
+        //     'click', handlerClickDocument, false);
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+
+<script src="js/jquery-1.10.2.min.js"></script>
+<script src="js/TweenMax.min.js"></script>
+<script src="js/jquery.gsap.min.js"></script>
+<script src="js/jquery.touchSwipe.min.js"></script>
+<style>
+#div1 {
+  width: 400px;
+  height: 300px;
+
+  background: red;
+  position: absolute;
+  left: 80px;
+}
+
+#div2 {
+  width: 100px;
+  height: 100px;
+  background: greenyellow;
+  position: absolute;
+  top: 30px;
+  left: 60px;
+}
+</style>
+
+<script>
+$(function() {
+  $("#div1").swipe({
+    
+    swipeRight:function(event, direction, distance, duration, fingerCount) {
+      console.log('swipe left');
+      $(this).animate({left: '200px'}, 300);
+    },
+      
+    threshold: 0
+  });
+});
+</script>
+</head>
+
+<body>
+  
+<div id="div1">
+  <div id="div2">
+  </div>
+</div>
+
+</body>
+</html>

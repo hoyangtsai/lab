@@ -17,6 +17,6 @@ $('#add').on('click', function(event) {
   event.preventDefault();
   $('<li/>', {
     'class': 'item',
-    'text' : 'Item'
+    'text' : 'New Item'
   }).appendTo('#list');
 });

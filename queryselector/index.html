@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="shortcut icon" href="#">
+</head>
+<body>
+  <div><div><span>InnerSpan</span></div></div>
+<div><span class="myClass">ClassSpan</span></div>
+
+<div class="test1">test 1 first</div>
+<div class="test1">test 1 second</div>
+
+<script type="text/javascript">
+  // alert(document.querySelector("div div span").innerHTML);
+  // alert(document.querySelector("span.myClass").innerHTML);
+  
+  var test1 = document.querySelectorAll('.test1');
+  for (var i = 0; i < test1.length; i++) {
+    alert(test1[i].innerHTML);
+  }
+</script>
+</body>
+</html>

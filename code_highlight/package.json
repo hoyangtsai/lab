@@ -1,0 +1,14 @@
+{
+  "name": "code_highlight",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "server": "hs ./",
+    "watch": "livereload .",
+    "scss": "node-sass -w scss/ -o css/ --include-path /Users/keithytsai/lab/code_highlight/",
+    "dev": "npm run server | npm run watch | npm run scss"
+  },
+  "author": "keithytsai",
+  "license": "ISC"
+}

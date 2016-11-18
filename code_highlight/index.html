@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script src="//cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+</head>
+<body>
+
+<pre class="prettyprint lang-js">
+$('.ui-draglist-inputrow').on('keyup', function(e) {
+  if (e.keyCode == 13 &&
+    $(this).children('.ui-draglist-attrinput').val() &&
+    $(this).children('.ui-draglist-syninput').val()) {
+
+    var row = $('&lt;li /&gt;', { class: 'ui-draglist-row' });
+    $('&lt;p /&gt', {
+      class: 'ui-draglist-attr',
+      text: $(this).children('.ui-draglist-attrinput').val()
+    }).appendTo(row);
+    $('&lt;p /&gt;', {
+      class: 'ui-draglist-syn',
+      text: $(this).children('.ui-draglist-syninput').val()
+    }).appendTo(row);
+    $('&lt;i /&gt;', { class: 'ui-draglist-sort' }).appendTo(row);
+    $('&lt;i /&gt;', { class: 'ui-draglist-del' }).appendTo(row);
+    $('.ui-draglist').append(row);
+
+    $(this).children('.ui-draglist-attrinput').val('');
+    $(this).children('.ui-draglist-syninput').val('');
+  }
+});
+</pre>
+
+</body>
+</html>
